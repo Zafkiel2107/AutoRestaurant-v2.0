@@ -1,0 +1,22 @@
+﻿<Window x:Class="AutoRestaurant.Windows.DishWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoRestaurant.Windows"
+        mc:Ignorable="d"
+        Title="DishWindow" Height="460" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="338,47,0,0" TextWrapping="Wrap" Text="Меню блюда" FontSize="24" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBlock HorizontalAlignment="Left" Margin="83,107,0,0" TextWrapping="Wrap" Text="Наименование блюда" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="100" Name="name" HorizontalAlignment="Left" Height="23" Margin="71,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+        <TextBlock HorizontalAlignment="Left" Margin="308,107,0,0" TextWrapping="Wrap" Text="Тип блюда" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <ComboBox Name="type" Height="23" VerticalAlignment="Top" Margin="266,138,386,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="474,107,0,0" TextWrapping="Wrap" Text="Стоимость" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox Name="cost" HorizontalAlignment="Left" Height="23" Margin="445,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text=",00"/>
+        <TextBlock Text="Список ингредиентов :" HorizontalAlignment="Left" Margin="83,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <ListBox Name="ingredients" SelectionMode="Multiple" Margin="266,215,170,34">
+        </ListBox>
+        <Button Name="btn" Content="Сохранить" HorizontalAlignment="Left" Margin="620,138,0,0" VerticalAlignment="Top" Width="86" Height="24" Click="CreateDish"/>
+    </Grid>
+</Window>

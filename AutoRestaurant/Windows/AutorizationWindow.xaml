@@ -1,0 +1,23 @@
+﻿<Window x:Class="AutoRestaurant.Windows.AutorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="AutorizationWindow" Height="175" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="10,4,10,17" Grid.RowSpan="2">Введите логин :</TextBlock>
+        <TextBox Name="loginBox" MinWidth="250" Grid.Row="1" Margin="10,0,10,0"/>
+        <TextBlock Margin="10,4,10,12" Grid.Row="2" Grid.RowSpan="2">Введите пароль :</TextBlock>
+        <PasswordBox Name="passwordBox" Grid.Row="3" MinWidth="250" Margin="10,0,10,-3"/>
+        <Button Name="connectBtn" IsDefault="True" Click="LogIn" MinWidth="60" Margin="30,35,161,-36" Content="Подключиться" RenderTransformOrigin="0.125,3.15" Grid.Row="3"/>
+        <Button Name="cancelBtn" IsCancel="True" MinWidth="60" Click="CancelLogIn" Content="Отмена" Margin="176,35,30,-36" Grid.Row="3" RenderTransformOrigin="0.525,0.225"/>
+        <TextBlock Name="Message" Margin="48,56,40,-56" Grid.Row="3" Foreground="Red" HorizontalAlignment="Center" Visibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="AutoRestaurant.Windows.IngredientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoRestaurant.Windows"
+        mc:Ignorable="d"
+        Title="IngredientWindow" Height="175" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="83,10,0,0" TextWrapping="Wrap" Text="Добавить ингредиент" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,61,0,0" TextWrapping="Wrap" Text="Наименование ингредиента" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="100" Name="name" HorizontalAlignment="Left" Height="23" Margin="22,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.085,2.59"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="185,97,0,0" VerticalAlignment="Top" Width="86" Height="24" Click="CreateIngredient"/>
+    </Grid>
+</Window>

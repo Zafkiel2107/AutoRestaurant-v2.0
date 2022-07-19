@@ -1,0 +1,29 @@
+﻿<Window x:Class="AutoRestaurant.Windows.ClassExtensionWindow.PassportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoRestaurant.Windows.ClassExtensionWindow"
+        mc:Ignorable="d"
+        Title="PassportWindow" Height="460" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,48,0,0" TextWrapping="Wrap" Text="Паспортные данные" FontSize="24" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="356,129,0,0" TextWrapping="Wrap" Text="Кем выдан" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="256" Name="issuedBy" HorizontalAlignment="Left" Height="23" Margin="136,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="499"/>
+        <TextBlock HorizontalAlignment="Left" Margin="161,200,0,0" TextWrapping="Wrap" Text="Дата выдачи" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <DatePicker Name="issuedDate" HorizontalAlignment="Left" Height="23" Margin="136,222,0,0"  VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="310,201,0,0" TextWrapping="Wrap" Text="Код" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="7" Name="code" HorizontalAlignment="Left" Height="23" Margin="293,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54"/>
+        <TextBlock HorizontalAlignment="Left" Margin="420,201,0,0" TextWrapping="Wrap" Text="Пол" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <ComboBox Name="type" Height="23" VerticalAlignment="Top" Margin="381,222,319,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="533,201,0,0" TextWrapping="Wrap" Text="Дата рождения" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <DatePicker Name="birthday" HorizontalAlignment="Left" Height="23" Margin="515,222,0,0"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.156,0.42"/>
+        <TextBlock HorizontalAlignment="Left" Margin="288,264,0,0" TextWrapping="Wrap" Text="Место рождения" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="256" Name="birthPlace" HorizontalAlignment="Left" Height="23" Margin="136,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="413"/>
+        <TextBlock HorizontalAlignment="Left" Margin="179,325,0,0" TextWrapping="Wrap" Text="Серия" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="4" Name="series" HorizontalAlignment="Left" Height="23" Margin="136,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,325,0,0" TextWrapping="Wrap" Text="Номер" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="6" Name="number" HorizontalAlignment="Left" Height="24" Margin="293,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btn" Content="Сохранить" HorizontalAlignment="Left" Margin="601,285,0,0" VerticalAlignment="Top" Width="86" Height="24" Click="SaveInfo"/>
+    </Grid>
+</Window>

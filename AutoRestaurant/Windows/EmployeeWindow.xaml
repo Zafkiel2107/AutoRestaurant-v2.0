@@ -1,0 +1,25 @@
+﻿<Window x:Class="AutoRestaurant.Windows.EmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoRestaurant.Windows"
+        mc:Ignorable="d"
+        Title="EmployeeWindow" Height="460" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="292,48,0,0" TextWrapping="Wrap" Text="Меню работника" FontSize="24" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="305,121,0,0" TextWrapping="Wrap" Text="Работник" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="100" Name="surname" HorizontalAlignment="Left" Height="23" Margin="205,150,0,0" Text="Фамилия" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <TextBox MaxLength="100" Name="name" HorizontalAlignment="Left" Height="23" Margin="345,150,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="464,241,0,0" TextWrapping="Wrap" Text="Зарплата" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox Name="salary" HorizontalAlignment="Left" Height="23" Margin="429,262,0,0" TextWrapping="Wrap" Text=",00" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="146,241,0,0" TextWrapping="Wrap" Text="Номер телефона" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox SelectionLength="10" Name="phone" HorizontalAlignment="Left" Height="23" Margin="132,262,0,0" TextWrapping="Wrap" Text="8**********" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btn" Content="Сохранить" HorizontalAlignment="Left" Margin="609,192,0,0" VerticalAlignment="Top" Width="86" Height="24" Click="CreateEmployee"/>
+        <TextBlock HorizontalAlignment="Left" Margin="305,236,0,0" TextWrapping="Wrap" Text="Должность" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <ComboBox Name="permission" Height="23" VerticalAlignment="Top" Margin="279,264,405,0"/>
+        <Button Content="Данные авторизации" HorizontalAlignment="Left" Margin="95,373,0,0" VerticalAlignment="Top" Width="126" Height="24" Click="LoginPasswordWindow"/>
+        <Button Content="Данные проживания" HorizontalAlignment="Left" Margin="279,373,0,0" VerticalAlignment="Top" Width="126" Height="24" Click="AddressWindow"/>
+        <Button Content="Паспортные данные" HorizontalAlignment="Left" Margin="475,373,0,0" VerticalAlignment="Top" Width="126" Height="24" Click="PassportWindow"/>
+    </Grid>
+</Window>

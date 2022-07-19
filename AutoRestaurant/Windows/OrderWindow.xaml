@@ -1,0 +1,24 @@
+﻿<Window x:Class="AutoRestaurant.Windows.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoRestaurant.Windows"
+        mc:Ignorable="d"
+        Title="OrderWindow" Height="460" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="332,47,0,0" TextWrapping="Wrap" Text="Меню заказа" FontSize="24" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBlock HorizontalAlignment="Left" Margin="46,114,0,0" TextWrapping="Wrap" Text="Стоимость заказа" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox Name="price" HorizontalAlignment="Left" Height="23" Margin="46,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="458,184,0,0" TextWrapping="Wrap" Text="Блюда" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBlock HorizontalAlignment="Left" Margin="281,114,0,0" TextWrapping="Wrap" Text="Работник" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <ComboBox Name="employee" Height="23" VerticalAlignment="Top" Margin="218,137,375,0">
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="71,216,0,0" TextWrapping="Wrap" Text="Заказчик" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148"/>
+        <TextBox MaxLength="100" Name="customerSurname" HorizontalAlignment="Left" Height="22" Margin="36,243,0,0" Text="Фамилия" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox MaxLength="100" Name="customerName" HorizontalAlignment="Left" Height="23" Margin="36,287,0,0" Text="Имя" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox SelectionChanged="Dishes_SelectionChanged" Name="dishes" SelectionMode="Multiple" Margin="218,216,64,41">
+        </ListBox>
+        <Button Name="btn" Content="Сохранить" HorizontalAlignment="Left" Margin="650,137,0,0" VerticalAlignment="Top" Width="86" Height="24" Click="CreateOrder" />
+    </Grid>
+</Window>

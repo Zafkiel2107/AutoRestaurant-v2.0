@@ -1,0 +1,115 @@
+﻿<Window x:Class="AutoRestaurant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="AutoRestaurant" Height="460" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <TabControl TabStripPlacement="Left" Margin="0,0,0,18">
+            <TabItem Name="Orders" Header="Заказы" Margin="0,0,0,-50">
+                <TabItem.Content>
+                    <Canvas>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" RenderTransformOrigin="0.258,0.148" Canvas.Left="23" Canvas.Top="45"/>
+                        <TextBox Name="OrderSearch" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Width="199" Canvas.Left="23" Canvas.Top="66"/>
+                        <Button Click="GetOrders" Content="Искать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="24" Canvas.Left="244" Canvas.Top="65"/>
+                        <DataGrid ColumnWidth="*" Name="OrdersList" Height="250" Width="650" Canvas.Left="23" Canvas.Top="147">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="Изменить" Click="OrderWindow"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="Удалить" Click="DeleteOrder"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button Content="Создать новую запись" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Height="24" Canvas.Left="538" Canvas.Top="65" Click="OrderWindow"/>
+                    </Canvas>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Name="Dishes" Header="Блюда" Margin="0,50,0,-100">
+                <TabItem.Content>
+                    <Canvas>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" RenderTransformOrigin="0.258,0.148" Canvas.Left="23" Canvas.Top="45"/>
+                        <TextBox Name="DishSearch" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Width="199" Canvas.Left="23" Canvas.Top="66"/>
+                        <Button Click="GetDishes" Content="Искать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="24" Canvas.Left="244" Canvas.Top="65"/>
+                        <DataGrid ColumnWidth="*" Name="DishesList" Height="250" Width="650" Canvas.Left="23" Canvas.Top="147">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="Изменить" Click="DishWindow"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="Удалить" Click="DeleteDish"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button Content="Создать новую запись" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Height="24" Canvas.Left="538" Canvas.Top="65" Click="DishWindow"/>
+                    </Canvas>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Name="Ingredients"  Header="Ингредиенты" Margin="0,100,0,-150">
+                <Canvas>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" RenderTransformOrigin="0.258,0.148" Canvas.Left="23" Canvas.Top="45"/>
+                    <TextBox Name="IngredientSearch" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Width="199" Canvas.Left="23" Canvas.Top="66"/>
+                    <Button Click="GetIngredients" Content="Искать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="24" Canvas.Left="244" Canvas.Top="65"/>
+                    <DataGrid ColumnWidth="*" Name="IngredientsList" Height="250" Width="650" Canvas.Left="23" Canvas.Top="147">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Удалить" Click="DeleteIngredient"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Создать новую запись" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Height="24" Canvas.Left="538" Canvas.Top="65" Click="IngredientWindow"/>
+                </Canvas>
+            </TabItem>
+            <TabItem Name="Employees" Header="Сотрудники" Margin="0,150,0,-200">
+                <Canvas>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" RenderTransformOrigin="0.258,0.148" Canvas.Left="23" Canvas.Top="45"/>
+                    <TextBox Name="EmployeeSearch" Height="23" TextWrapping="Wrap" Width="199" Canvas.Left="23" Canvas.Top="66"/>
+                    <Button Click="GetEmployees" Content="Искать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="24" Canvas.Left="244" Canvas.Top="65"/>
+                    <DataGrid ColumnWidth="*" Name="EmployeesList" Height="250" Width="650" Canvas.Left="23" Canvas.Top="147">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Изменить" Click="EmployeeWindow"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Удалить" Click="DeleteEmployee"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Создать новую запись" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Height="24" Canvas.Left="538" Canvas.Top="65" Click="EmployeeWindow"/>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <TextBlock HorizontalAlignment="Left" Margin="216,405,0,0" TextWrapping="Wrap" Text="Вы зарегистрированы как :" VerticalAlignment="Top" Width="149"/>
+        <TextBlock Name="Login" Foreground="Red" HorizontalAlignment="Left" Margin="379,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.148" Width="269" Height="16"/>
+    </Grid>
+</Window>
